@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
 
 // Home Page
 Route::get('/', function () {
@@ -66,3 +67,26 @@ Route::get('/privacy-policy', function () {
 Route::get('/pricing', function () {
     return view('pricing');
 })->name('pricing');
+
+// Fixed-plan checkout
+Route::get('/checkout/{plan}', [PaymentController::class, 'checkout'])->name('checkout');
+
+// Custom payment
+Route::get('/pay', [PaymentController::class, 'customForm'])->name('payment.custom');
+Route::post('/pay', [PaymentController::class, 'customCheckout'])->name('payment.custom.process');
+
+// Result pages
+Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+
+// Webhook (must be excluded from CSRF — see step 7)
+Route::post('/stripe/webhook', [PaymentController::class, 'webhook'])->name('stripe.webhook');
+
+// Client opens this to pay (no login needed — the link IS the access)
+Route::get('/pay/{reference}', [PaymentController::class, 'payShow'])->name('pay.show');
+
+// YOUR private link generator — protected by password
+Route::middleware('admin.gate')->group(function () {
+    Route::get('/admin/create-link', [PaymentController::class, 'createLinkForm'])->name('admin.create-link');
+    Route::post('/admin/create-link', [PaymentController::class, 'createPaymentLink'])->name('admin.create-link.store');
+});

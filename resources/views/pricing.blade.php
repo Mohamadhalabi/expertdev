@@ -10,23 +10,24 @@
     <div class="max-w-2xl mx-auto text-center space-y-3">
       <span data-ns-animate data-delay="0.2" class="badge badge-cyan">Engagement Models</span>
       <h1 data-ns-animate data-delay="0.3" class="text-secondary dark:text-accent text-heading-3 md:text-heading-2">Transparent pricing for custom software.</h1>
-      <p class="text-secondary/60 dark:text-accent/60">Choose the engagement model that best aligns with your project scope, timeline, and business goals.</p>
+      <p class="text-secondary/60 dark:text-accent/60">Web, mobile, and SaaS development — pick the engagement that fits your scope, then pay securely to get started.</p>
     </div>
     <div class="grid grid-cols-12 gap-8">
-      
-      <div class="col-span-12 md:col-span-6 xl:col-span-3">
-        <div data-ns-animate data-delay="0.4" class="h-full flex flex-col">
+
+      {{-- Bug Fixes — $15 --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+        <div data-ns-animate data-delay="0.3" class="h-full flex flex-col">
           <div class="rounded-[20px] py-8 px-6 bg-background-3 dark:bg-background-7 space-y-8 border border-stroke-1 dark:border-white/5">
             <div>
               <p class="text-tagline-1 font-medium mb-3 text-secondary/60 dark:text-accent/60">Quick Resolutions</p>
               <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">Bug Fixes</h3>
               <div class="mt-4 flex items-baseline text-secondary dark:text-accent">
-                <span class="text-heading-3 font-bold">$10</span>
+                <span class="text-heading-3 font-bold">$15</span>
                 <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/fix</span>
               </div>
               <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">Best for smaller bug fixes</p>
             </div>
-            <a href="{{ url('contact') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
+            <a href="{{ route('checkout', 'bug-fixes') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
               Get Started
             </a>
           </div>
@@ -47,19 +48,20 @@
         </div>
       </div>
 
-      <div class="col-span-12 md:col-span-6 xl:col-span-3">
-        <div data-ns-animate data-delay="0.5" class="h-full flex flex-col">
+      {{-- Feature Improvement — $30 --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+        <div data-ns-animate data-delay="0.4" class="h-full flex flex-col">
           <div class="rounded-[20px] py-8 px-6 bg-background-3 dark:bg-background-7 space-y-8 border border-stroke-1 dark:border-white/5">
             <div>
               <p class="text-tagline-1 font-medium mb-3 text-secondary/60 dark:text-accent/60">Feature Updates</p>
               <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">Improvements</h3>
               <div class="mt-4 flex items-baseline text-secondary dark:text-accent">
-                <span class="text-heading-3 font-bold">$40</span>
+                <span class="text-heading-3 font-bold">$30</span>
                 <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/task</span>
               </div>
               <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">Best for feature additions</p>
             </div>
-            <a href="{{ url('contact') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
+            <a href="{{ route('checkout', 'improvements') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
               Get Started
             </a>
           </div>
@@ -72,7 +74,7 @@
                  <p class="text-secondary/60 dark:text-accent/60 text-sm">Performance Optimization</p>
               </li>
               <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
-                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Minor API Integrations</p>
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Responsive Fixes</p>
               </li>
               <li class="h-14 px-6 py-4 text-center"></li>
             </ul>
@@ -80,19 +82,88 @@
         </div>
       </div>
 
-      <div class="col-span-12 md:col-span-6 xl:col-span-3">
+      {{-- API Integration — $45 --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+        <div data-ns-animate data-delay="0.5" class="h-full flex flex-col">
+          <div class="rounded-[20px] py-8 px-6 bg-background-3 dark:bg-background-7 space-y-8 border border-stroke-1 dark:border-white/5">
+            <div>
+              <p class="text-tagline-1 font-medium mb-3 text-secondary/60 dark:text-accent/60">Connected Services</p>
+              <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">API Integration</h3>
+              <div class="mt-4 flex items-baseline text-secondary dark:text-accent">
+                <span class="text-heading-3 font-bold">$45</span>
+                <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/integration</span>
+              </div>
+              <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">Best for connecting third-party services</p>
+            </div>
+            <a href="{{ route('checkout', 'integration') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
+              Get Started
+            </a>
+          </div>
+          <div class="rounded-[20px] bg-background-1 dark:bg-background-6 mt-6 border border-stroke-1 dark:border-white/5 flex-1">
+            <ul>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8">
+                <p class="font-medium text-secondary dark:text-accent">Payment Gateways</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">REST & Webhook Setup</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Third-Party SDKs</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {{-- Custom Module — $48 --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+        <div data-ns-animate data-delay="0.5" class="h-full flex flex-col">
+          <div class="rounded-[20px] py-8 px-6 bg-background-3 dark:bg-background-7 space-y-8 border border-stroke-1 dark:border-white/5">
+            <div>
+              <p class="text-tagline-1 font-medium mb-3 text-secondary/60 dark:text-accent/60">Tailored Features</p>
+              <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">Custom Module</h3>
+              <div class="mt-4 flex items-baseline text-secondary dark:text-accent">
+                <span class="text-heading-3 font-bold">$48</span>
+                <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/module</span>
+              </div>
+              <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">Best for a self-contained new feature</p>
+            </div>
+            <a href="{{ route('checkout', 'module') }}" class="btn btn-white hover:btn-primary dark:btn-white-dark btn-md w-full before:content-none first-letter:uppercase">
+              Get Started
+            </a>
+          </div>
+          <div class="rounded-[20px] bg-background-1 dark:bg-background-6 mt-6 border border-stroke-1 dark:border-white/5 flex-1">
+            <ul>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8">
+                <p class="font-medium text-secondary dark:text-accent">Feature Build</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Web & Mobile Ready</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Documented Code</p>
+              </li>
+              <li class="h-14 px-6 py-4 text-center"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {{-- Web & Mobile Project — $100 (highlighted) --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
         <div data-ns-animate data-delay="0.6" class="h-full flex flex-col">
           <div class="rounded-[20px] relative py-8 px-6 bg-secondary dark:bg-background-5 space-y-8 overflow-hidden border border-stroke-1 dark:border-white/5">
             <div class="relative z-10">
               <p class="text-tagline-1 text-accent/60 font-medium mb-3">End-to-End</p>
-              <h3 class="text-heading-5 font-normal text-white dark:text-accent">Projects</h3>
+              <h3 class="text-heading-5 font-normal text-white dark:text-accent">Web &amp; Mobile App</h3>
               <div class="mt-4 flex items-baseline text-white dark:text-accent">
                 <span class="text-heading-3 font-bold">$100</span>
-                <span class="ml-1 text-accent/60 text-sm">/starting at</span>
+                <span class="ml-1 text-accent/60 text-sm">/milestone</span>
               </div>
-              <p class="text-accent/60 text-sm mt-2">Best for standard apps</p>
+              <p class="text-accent/60 text-sm mt-2">Best for full applications</p>
             </div>
-            <a href="{{ url('contact') }}" class="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent w-full relative z-10 before:content-none first-letter:uppercase">
+            <a href="{{ route('checkout', 'projects') }}" class="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent w-full relative z-10 before:content-none first-letter:uppercase">
               Start Project
             </a>
           </div>
@@ -102,10 +173,10 @@
                 <p class="font-medium text-secondary dark:text-accent">Full-Stack Development</p>
               </li>
               <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
-                <p class="text-secondary/60 dark:text-accent/60 text-sm">Database & API Design</p>
+                <p class="text-secondary/60 dark:text-accent/60 text-sm">iOS & Android Apps</p>
               </li>
               <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
-                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Milestone Delivery</p>
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Database & API Design</p>
               </li>
               <li class="h-14 px-6 py-4 text-center"></li>
             </ul>
@@ -113,20 +184,21 @@
         </div>
       </div>
 
-      <div class="col-span-12 md:col-span-6 xl:col-span-3">
+      {{-- SaaS Development — $200 --}}
+      <div class="col-span-12 md:col-span-6 xl:col-span-4">
         <div data-ns-animate data-delay="0.7" class="h-full flex flex-col">
           <div class="rounded-[20px] py-8 px-6 bg-background-3 dark:bg-background-7 space-y-8 border border-stroke-1 dark:border-white/5">
             <div>
               <p class="text-tagline-1 font-medium mb-3 text-secondary/60 dark:text-accent/60">Large Scale</p>
-              <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">Enterprise</h3>
+              <h3 class="text-heading-5 font-normal text-secondary dark:text-accent">SaaS Platform</h3>
               <div class="mt-4 flex items-baseline text-secondary dark:text-accent">
                 <span class="text-heading-3 font-bold">$200</span>
-                <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/starting at</span>
+                <span class="ml-1 text-secondary/60 dark:text-accent/60 text-sm">/milestone</span>
               </div>
-              <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">For complex, multi-platform systems</p>
+              <p class="text-secondary/60 dark:text-accent/60 text-sm mt-2">For complex, multi-tenant SaaS products</p>
             </div>
-            <a href="{{ url('contact') }}" class="btn btn-white dark:btn-white-dark hover:btn-primary btn-md w-full before:content-none first-letter:uppercase">
-              Let's Talk
+            <a href="{{ route('checkout', 'saas') }}" class="btn btn-white dark:btn-white-dark hover:btn-primary btn-md w-full before:content-none first-letter:uppercase">
+              Start Build
             </a>
           </div>
           <div class="rounded-[20px] bg-background-1 dark:bg-background-6 mt-6 border border-stroke-1 dark:border-white/5 flex-1">
@@ -135,17 +207,24 @@
                 <p class="font-medium text-secondary dark:text-accent">Custom Architecture</p>
               </li>
               <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
-                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Cross-Platform Solutions</p>
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Multi-Tenant & Auth</p>
               </li>
               <li class="h-14 px-6 py-4 text-center border-b border-b-stroke-4 dark:border-stroke-8 flex items-center justify-center">
-                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Priority SLA Support</p>
+                 <p class="text-secondary/60 dark:text-accent/60 text-sm">Scalable Cloud Setup</p>
               </li>
               <li class="h-14 px-6 py-4 text-center"></li>
             </ul>
           </div>
         </div>
       </div>
-      
+
+    </div>
+
+    <div class="text-center">
+      <p class="text-secondary/60 dark:text-accent/60">
+        Already agreed on a custom scope with us?
+        <a href="{{ route('payment.custom') }}" class="text-primary-500 underline">Make a custom payment</a>
+      </p>
     </div>
   </div>
 </section>

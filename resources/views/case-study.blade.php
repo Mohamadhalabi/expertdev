@@ -140,7 +140,7 @@ More Projects
           </article>
 
           <!-- K3ey.com -->
-          <article data-ns-animate data-delay="0.4" class="group max-w-[409px] col-span-12 md:col-span-6 lg:col-span-4" itemscope itemtype="http://schema.org/Article">
+          <!-- <article data-ns-animate data-delay="0.4" class="group max-w-[409px] col-span-12 md:col-span-6 lg:col-span-4" itemscope itemtype="http://schema.org/Article">
             <a href="https://k3ey.com" target="_blank" class="block h-full">
               <div class="bg-white dark:bg-background-6 rounded-[20px] scale-100 hover:scale-[102%] transition-transform duration-500 border border-stroke-1 dark:border-white/10 shadow-sm dark:shadow-none h-full flex flex-col">
               <figure class="w-full h-[260px] overflow-hidden rounded-t-[20px] bg-white p-4 flex items-center justify-center">
@@ -152,7 +152,7 @@ More Projects
               </div>
             </div>
             </a>
-          </article>
+          </article> -->
 
         </div>
       </div>
